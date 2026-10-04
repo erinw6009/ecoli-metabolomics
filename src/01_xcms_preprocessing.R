@@ -1,6 +1,6 @@
  
 # Step 1: XCMS preprocessing of LC-MS mzML data
-# E. coli metabolomics PhD application
+
  
 
 # Packages ---------------------------------------------------

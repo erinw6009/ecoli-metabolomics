@@ -14,9 +14,9 @@
 import pandas as pd
 
 
-# ------------------------------------------------------------
+ 
 # 1. Load Step 3 ECMDB context results
-# ------------------------------------------------------------
+ 
 
 context = pd.read_csv(
     "ipapy2_ecmdb_context_candidates.csv"
@@ -28,9 +28,9 @@ print(
 )
 
 
-# ------------------------------------------------------------
+ 
 # 2. Keep only ECMDB-supported candidates
-# ------------------------------------------------------------
+ 
 
 supported = context[
     context["ecmdb_match"] == True
@@ -42,9 +42,9 @@ print(
 )
 
 
-# ------------------------------------------------------------
+ 
 # 3. Check KEGG IDs
-# ------------------------------------------------------------
+ 
 
 supported["kegg_id"] = (
     supported["kegg_id"]
@@ -65,9 +65,9 @@ print(
 )
 
 
-# ------------------------------------------------------------
+ 
 # 4. Load biochemical connections
-# ------------------------------------------------------------
+ 
 
 connections = pd.read_csv(
     "ipaPy2/DB/allBIO_reactions.csv"
@@ -95,9 +95,9 @@ print(
 )
 
 
-# ------------------------------------------------------------
+ 
 # 5. Find connections between ECMDB-supported metabolites
-# ------------------------------------------------------------
+ 
 
 connected_pairs = []
 
@@ -127,9 +127,9 @@ print(
 )
 
 
-# ------------------------------------------------------------
+ 
 # 6. Identify KEGG compounds with biochemical support
-# ------------------------------------------------------------
+ 
 
 connected_kegg = set()
 
@@ -139,9 +139,9 @@ for a, b in connected_pairs:
     connected_kegg.add(b)
 
 
-# ------------------------------------------------------------
+ 
 # 7. Mark candidate annotations
-# ------------------------------------------------------------
+ 
 
 supported["biochemical_context"] = (
     supported["kegg_id"]
@@ -149,9 +149,9 @@ supported["biochemical_context"] = (
 )
 
 
-# ------------------------------------------------------------
+ 
 # 8. Save candidate-level results
-# ------------------------------------------------------------
+ 
 
 supported.to_csv(
     "ipapy2_ecmdb_biochemical_candidates.csv",
@@ -159,9 +159,9 @@ supported.to_csv(
 )
 
 
-# ------------------------------------------------------------
+ 
 # 9. Feature-level summary
-# ------------------------------------------------------------
+ 
 
 feature_summary = (
     supported
@@ -190,9 +190,9 @@ feature_summary.to_csv(
 )
 
 
-# ------------------------------------------------------------
+ 
 # 10. Convert KEGG pairs into readable metabolite pairs
-# ------------------------------------------------------------
+ 
 
 kegg_to_name = (
     supported[
@@ -234,9 +234,9 @@ pair_table.to_csv(
 )
 
 
-# ------------------------------------------------------------
+ 
 # 11. Summary
-# ------------------------------------------------------------
+ 
 
 print()
 print("STEP 4 COMPLETE")
