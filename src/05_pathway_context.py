@@ -1,6 +1,6 @@
-# ============================================================
+ 
 # Step 4: Biochemical-Connection Context
-# ============================================================
+ 
 #
 # Goal:
 # Use ECMDB-supported ipaPy2 annotations and known biochemical
@@ -9,7 +9,7 @@
 # Step 3 established the ECMDB mapping.
 # Step 4 uses those KEGG IDs to find connections between
 # supported metabolites.
-# ============================================================
+ 
 
 import pandas as pd
 

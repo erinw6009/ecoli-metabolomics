@@ -1,4 +1,4 @@
-# ============================================================
+ 
 # Step 3: Context-aware annotation using ECMDB
 #
 # Goal:
@@ -15,16 +15,16 @@
 # ECMDB membership is used as biological prior/context.
 # It does NOT prove that the metabolite is present in the
 # experimental sample.
-# ============================================================
+ 
 
 import json
 import pickle
 import pandas as pd
 
 
-# ------------------------------------------------------------
+ 
 # 1. Load ECMDB
-# ------------------------------------------------------------
+ 
 
 ECMDB_PATH = "data/ecmdb/ecmdb.json"
 
@@ -36,9 +36,9 @@ ecmdb_df = pd.DataFrame(ecmdb)
 print("ECMDB records:", len(ecmdb_df))
 
 
-# ------------------------------------------------------------
+ 
 # 2. Load baseline ipaPy2 annotations
-# ------------------------------------------------------------
+ 
 
 with open(
     "ipapy2_baseline_annotations.pkl",
@@ -49,10 +49,10 @@ with open(
 print("ipaPy2 annotated features:", len(annotations))
 
 
-# ------------------------------------------------------------
+ 
 # 3. Convert ipaPy2 dictionaries of DataFrames into
 #    one long table
-# ------------------------------------------------------------
+ 
 
 rows = []
 
@@ -79,12 +79,12 @@ ipa_df = pd.DataFrame(rows)
 print("Total ipaPy2 candidate rows:", len(ipa_df))
 
 
-# ------------------------------------------------------------
+ 
 # 4. Normalise metabolite names
 #
 # This is deliberately simple and transparent.
 # We will record the mapping method rather than hiding it.
-# ------------------------------------------------------------
+ 
 
 def normalise_name(x):
 
@@ -107,9 +107,9 @@ ecmdb_df["name_normalised"] = ecmdb_df["name"].apply(
 )
 
 
-# ------------------------------------------------------------
+ 
 # 5. Create ECMDB lookup table
-# ------------------------------------------------------------
+ 
 
 ecmdb_lookup = ecmdb_df[
     [
@@ -127,7 +127,7 @@ ecmdb_lookup = ecmdb_df[
 ].copy()
 
 
-# ------------------------------------------------------------
+ 
 # 6. Match ipaPy2 candidates to ECMDB
 #
 # Primary mapping used here:
@@ -135,7 +135,7 @@ ecmdb_lookup = ecmdb_df[
 #
 # We keep the mapping method explicit because database
 # cross-referencing can produce ambiguous matches.
-# ------------------------------------------------------------
+ 
 
 context_df = ipa_df.merge(
     ecmdb_lookup,
@@ -145,9 +145,9 @@ context_df = ipa_df.merge(
 )
 
 
-# ------------------------------------------------------------
+ 
 # 7. Add context flag
-# ------------------------------------------------------------
+ 
 
 context_df["ecmdb_match"] = (
     context_df["met_id"].notna()
@@ -170,9 +170,9 @@ context_df["mapping_method"] = context_df[
 })
 
 
-# ------------------------------------------------------------
+ 
 # 8. Save complete candidate table
-# ------------------------------------------------------------
+ 
 
 context_df.to_csv(
     "ipapy2_ecmdb_context_candidates.csv",
@@ -180,12 +180,12 @@ context_df.to_csv(
 )
 
 
-# ------------------------------------------------------------
+ 
 # 9. Create feature-level summary
 #
 # This tells us whether each feature has at least one
 # ECMDB-supported candidate.
-# ------------------------------------------------------------
+ 
 
 feature_summary = (
     context_df
@@ -205,9 +205,9 @@ feature_summary.to_csv(
 )
 
 
-# ------------------------------------------------------------
+ 
 # 10. Print summary
-# ------------------------------------------------------------
+ 
 
 print()
 print("ECMDB context summary")

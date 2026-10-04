@@ -1,6 +1,6 @@
-# ============================================================
+ 
 # Step 2: Feature selection for ipaPy2
-# ============================================================
+ 
 library(xcms)
 library(MSnbase)
 # Load XCMS result
@@ -103,9 +103,9 @@ cat(
   nrow(selected_features),
   "\n"
 )
-# ------------------------------------------------------------
+ 
 # Prepare selected features for ipaPy2
-# ------------------------------------------------------------
+ 
 
 metadata <- read.csv(
   "feature_metadata.csv",

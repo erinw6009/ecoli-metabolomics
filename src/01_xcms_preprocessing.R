@@ -1,7 +1,7 @@
-# ============================================================
+ 
 # Step 1: XCMS preprocessing of LC-MS mzML data
 # E. coli metabolomics PhD application
-# ============================================================
+ 
 
 # Packages ---------------------------------------------------
 library(xcms)
@@ -25,16 +25,16 @@ files <- sort(files)
 
 cat("Number of mzML files:", length(files), "\n")
 
-# ------------------------------------------------------------
+ 
 # 1. Load raw MS data
-# ------------------------------------------------------------
+ 
 
 raw_data <- readMSData(
   files,
   mode = "onDisk"
 )
 
-# ------------------------------------------------------------
+ 
 # 2. Peak picking using CentWave
 #
 # Parameters used:
@@ -43,7 +43,7 @@ raw_data <- readMSData(
 # snthresh  = 10
 # prefilter = minimum 3 scans and intensity 100
 # mzdiff    = -0.001
-# ------------------------------------------------------------
+ 
 
 cwp <- CentWaveParam(
   ppm = 15,
@@ -73,9 +73,9 @@ cat(
 
 saveRDS(xdata, "xdata_peakpicked.rds")
 
-# ------------------------------------------------------------
+ 
 # 3. Retention-time alignment using Obiwarp
-# ------------------------------------------------------------
+ 
 
 obiwarp <- ObiwarpParam(
   binSize = 0.6
@@ -88,12 +88,12 @@ xdata_aligned <- adjustRtime(
 
 saveRDS(xdata_aligned, "xdata_aligned.rds")
 
-# ------------------------------------------------------------
+ 
 # 4. Peak grouping / correspondence
 #
 # Peaks with similar m/z and retention time are grouped
 # into common features across samples.
-# ------------------------------------------------------------
+ 
 
 pdp <- PeakDensityParam(
   sampleGroups = rep(1, length(files)),
@@ -115,9 +115,9 @@ cat(
 
 saveRDS(xdata_grouped, "xdata_grouped.rds")
 
-# ------------------------------------------------------------
+ 
 # 5. Fill missing chromatographic peaks
-# ------------------------------------------------------------
+ 
 
 xdata_filled <- fillChromPeaks(
   xdata_grouped
@@ -125,25 +125,25 @@ xdata_filled <- fillChromPeaks(
 
 saveRDS(xdata_filled, "xdata_filled.rds")
 
-# ------------------------------------------------------------
+ 
 # 6. Extract feature intensity matrix
 #
 # "into" = integrated peak intensity
 # Rows    = features
 # Columns = samples
-# ------------------------------------------------------------
+ 
 
 feature_matrix <- featureValues(
   xdata_filled,
   value = "into"
 )
 
-# ------------------------------------------------------------
+ 
 # 7. Extract feature metadata
 #
 # Keep the main feature descriptors required downstream:
 # feature ID, median m/z and median retention time.
-# ------------------------------------------------------------
+ 
 
 feature_info <- featureDefinitions(xdata_filled)
 
@@ -153,9 +153,9 @@ feature_info_simple <- data.frame(
   rt = feature_info$rtmed
 )
 
-# ------------------------------------------------------------
+ 
 # 8. Export outputs for downstream Python / ipaPy2 analysis
-# ------------------------------------------------------------
+ 
 
 write.csv(
   feature_matrix,
@@ -169,9 +169,9 @@ write.csv(
   row.names = FALSE
 )
 
-# ------------------------------------------------------------
+ 
 # 9. Basic validation
-# ------------------------------------------------------------
+ 
 
 cat(
   "Final intensity matrix dimensions:",

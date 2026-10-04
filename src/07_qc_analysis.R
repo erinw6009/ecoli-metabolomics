@@ -1,14 +1,14 @@
 
-# ============================================================
+ 
 # Task 5 — QC analysis
 # Assess analytical stability and reproducibility
-# ============================================================
+ 
 
 library(ggplot2)
 
-# ------------------------------------------------------------
+ 
 # 1. Load intensity matrix
-# ------------------------------------------------------------
+ 
 
 feature_matrix <- read.csv(
   "feature_intensity_matrix.csv",
@@ -19,9 +19,9 @@ feature_matrix <- read.csv(
 cat("Feature matrix:", nrow(feature_matrix), "features x",
     ncol(feature_matrix), "samples\n")
 
-# ------------------------------------------------------------
+ 
 # 2. Identify QC samples
-# ------------------------------------------------------------
+ 
 
 qc_cols <- grep(
   "QCPool",
@@ -33,17 +33,17 @@ qc_matrix <- feature_matrix[, qc_cols, drop = FALSE]
 
 cat("QC samples:", ncol(qc_matrix), "\n")
 
-# ------------------------------------------------------------
+ 
 # 3. Log transform
-# ------------------------------------------------------------
+ 
 # Log transformation reduces the effect of extremely
 # abundant features dominating the analysis.
 
 qc_log <- log10(qc_matrix + 1)
 
-# ------------------------------------------------------------
+ 
 # 4. Pairwise QC correlations
-# ------------------------------------------------------------
+ 
 
 qc_cor <- cor(
   qc_log,
@@ -59,9 +59,9 @@ write.csv(
 cat("\nPairwise QC correlations:\n")
 print(round(qc_cor, 3))
 
-# ------------------------------------------------------------
+ 
 # 5. Calculate feature-level QC CV
-# ------------------------------------------------------------
+ 
 
 qc_mean <- rowMeans(
   qc_matrix,
@@ -94,16 +94,16 @@ write.csv(
   row.names = FALSE
 )
 
-# ------------------------------------------------------------
+ 
 # 6. Summarise QC CV
-# ------------------------------------------------------------
+ 
 
 cat("\nQC feature CV summary:\n")
 print(summary(qc_summary$CV))
 
-# ------------------------------------------------------------
+ 
 # 7. Plot CV distribution
-# ------------------------------------------------------------
+ 
 
 p_cv <- ggplot(
   qc_summary,
@@ -127,9 +127,9 @@ ggsave(
   dpi = 300
 )
 
-# ------------------------------------------------------------
+ 
 # 8. PCA of QC samples
-# ------------------------------------------------------------
+ 
 
 # Transpose so samples are rows and features are columns.
 pca_input <- t(qc_log)

@@ -1,22 +1,22 @@
-# ============================================================
+ 
 # Step 2: ipaPy2 baseline MS1 annotation
-# ============================================================
+ 
 
 import os
 import pandas as pd
 from ipaPy2 import ipa
 
-# ------------------------------------------------------------
+ 
 # Paths
-# ------------------------------------------------------------
+ 
 
 SELECTED = "ipapy2_input_1000.csv"
 INTENSITIES = "feature_intensity_matrix.csv"
 DB_DIR = "ipaPy2/DB"
 
-# ------------------------------------------------------------
+ 
 # 1. Load selected features
-# ------------------------------------------------------------
+ 
 
 selected = pd.read_csv(SELECTED)
 
@@ -24,9 +24,9 @@ selected["feature_id"] = selected["feature_id"].astype(str)
 
 print("Selected features:", len(selected))
 
-# ------------------------------------------------------------
+ 
 # 2. Load the full XCMS intensity matrix
-# ------------------------------------------------------------
+ 
 
 intensity = pd.read_csv(
     INTENSITIES,
@@ -40,7 +40,7 @@ intensity = intensity.loc[selected["feature_id"]]
 
 print("Intensity matrix:", intensity.shape)
 
-# ------------------------------------------------------------
+ 
 # 3. Build ipaPy2 input
 #
 # ipaPy2 expects:
@@ -50,7 +50,7 @@ print("Intensity matrix:", intensity.shape)
 #   column 3 = RTs
 #   columns 4 onward = intensity for each sample
 #
-# ------------------------------------------------------------
+ 
 
 df = pd.DataFrame({
     "ids": selected["feature_id"].values,
@@ -65,9 +65,9 @@ for sample in intensity.columns:
 print("ipaPy2 dataframe:", df.shape)
 print("Number of intensity columns:", len(df.columns) - 3)
 
-# ------------------------------------------------------------
+ 
 # 4. Cluster features
-# ------------------------------------------------------------
+ 
 
 print("Clustering features...")
 
@@ -81,9 +81,9 @@ df = ipa.clusterFeatures(
 print("Feature clustering complete.")
 print("Clusters/features returned:", len(df))
 
-# ------------------------------------------------------------
+ 
 # 5. Map isotope patterns
-# ------------------------------------------------------------
+ 
 
 print("Mapping isotope patterns...")
 
@@ -96,9 +96,9 @@ ipa.map_isotope_patterns(
 )
 print("Isotope mapping complete.")
 
-# ------------------------------------------------------------
+ 
 # 6. Load ipaPy2's default repository database
-# ------------------------------------------------------------
+ 
 
 adduct_file = os.path.join(
     DB_DIR,
@@ -116,9 +116,9 @@ db = pd.read_csv(db_file)
 print("Adduct database rows:", len(adducts))
 print("IPA MS1 database rows:", len(db))
 
-# ------------------------------------------------------------
+ 
 # 7. Compute possible adducts
-# ------------------------------------------------------------
+ 
 
 print("Computing adducts...")
 
@@ -132,11 +132,11 @@ all_adds = ipa.compute_all_adducts(
 print("Adduct calculation complete.")
 print("Possible adduct entries:", len(all_adds))
 
-# ------------------------------------------------------------
+ 
 # 8. Baseline MS1 annotation
 #
 # 15 ppm matches the XCMS mass-trace setting used earlier.
-# ------------------------------------------------------------
+ 
 
 print("Running ipaPy2 MS1 annotation...")
 
@@ -150,9 +150,9 @@ annotations = ipa.MS1annotation(
 print("MS1 annotation complete.")
 print("Annotated feature entries:", len(annotations))
 
-# ------------------------------------------------------------
+ 
 # 9. Save processed feature information
-# ------------------------------------------------------------
+ 
 
 df.to_csv(
     "ipapy2_features_baseline.csv",
