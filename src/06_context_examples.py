@@ -1,9 +1,9 @@
 import pandas as pd
 
 
-# ------------------------------------------------------------
+ 
 # Load Step 3 and Step 4 results
-# ------------------------------------------------------------
+ 
 
 baseline = pd.read_csv(
     "ipapy2_ecmdb_context_candidates.csv"
@@ -14,18 +14,18 @@ biochem = pd.read_csv(
 )
 
 
-# ------------------------------------------------------------
+ 
 # Keep ECMDB-supported candidates
-# ------------------------------------------------------------
+ 
 
 baseline_ecmdb = baseline[
     baseline["ecmdb_match"] == True
 ].copy()
 
 
-# ------------------------------------------------------------
+ 
 # Add biochemical-context information
-# ------------------------------------------------------------
+ 
 
 biochem_cols = [
     "feature_id",
@@ -42,14 +42,14 @@ biochem_small = biochem[
 ].drop_duplicates()
 
 
-# ------------------------------------------------------------
+ 
 # Find features where:
 #
 # 1. There is more than one ECMDB candidate
 # 2. At least one candidate has biochemical context
 # 3. Therefore biological context helps distinguish
 #    among competing candidates.
-# ------------------------------------------------------------
+ 
 
 candidate_counts = (
     baseline_ecmdb
@@ -114,9 +114,9 @@ print(
 )
 
 
-# ------------------------------------------------------------
+ 
 # Print candidate-level details for the best examples
-# ------------------------------------------------------------
+ 
 
 print()
 print("=" * 70)
@@ -155,9 +155,9 @@ for feature_id in examples.head(5)["feature_id"]:
     )
 
 
-# ------------------------------------------------------------
+ 
 # Save examples
-# ------------------------------------------------------------
+ 
 
 example_ids = examples.head(5)[
     "feature_id"
