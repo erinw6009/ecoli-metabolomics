@@ -1,0 +1,198 @@
+kegg_id_1,kegg_id_2,name_1,name_2
+C00004,C00008,NADH,ADP
+C00004,C00037,NADH,Glycine
+C00004,C00041,NADH,L-Alanine
+C00004,C00047,NADH,L-Lysine
+C00004,C00051,NADH,Glutathione
+C00004,C00062,NADH,L-Arginine
+C00004,C00064,NADH,L-Glutamine
+C00004,C00065,NADH,L-Serine
+C00004,C00078,NADH,L-Tryptophan
+C00004,C00082,NADH,L-Tyrosine
+C00004,C00099,NADH,beta-Alanine
+C00004,C00106,NADH,Uracil
+C00004,C00118,NADH,D-Glyceraldehyde 3-phosphate
+C00004,C00123,NADH,L-Leucine
+C00004,C00135,NADH,L-Histidine
+C00004,C00148,NADH,L-Proline
+C00004,C00160,NADH,Glycolate
+C00004,C00178,NADH,Thymine
+C00004,C00181,NADH,D-Xylose
+C00004,C00183,NADH,L-Valine
+C00004,C00216,NADH,D-Arabinose
+C00004,C00248,NADH,Lipoamide
+C00004,C00257,NADH,Gluconic acid
+C00004,C00259,NADH,L-Arabinose
+C00004,C00279,NADH,D-Erythrose 4-phosphate
+C00004,C00309,NADH,D-Ribulose
+C00004,C00310,NADH,D-Xylulose
+C00004,C00331,NADH,Indolepyruvate
+C00004,C00349,NADH,2-Methyl-3-oxopropanoate
+C00004,C00355,NADH,"3,4-Dihydroxy-L-phenylalanine"
+C00004,C00385,NADH,Xanthine
+C00004,C00497,NADH,(R)-Malate
+C00004,C00508,NADH,L-Ribulose
+C00004,C00519,NADH,Hypotaurine
+C00004,C00522,NADH,(R)-Pantoate
+C00004,C00601,NADH,Phenylacetaldehyde
+C00004,C00719,NADH,Betaine
+C00004,C00800,NADH,L-Gulonate
+C00004,C00802,NADH,Oxalureate
+C00004,C01007,NADH,Reduced riboflavin
+C00004,C01031,NADH,S-Formylglutathione
+C00004,C01157,NADH,Hydroxyproline
+C00004,C01412,NADH,Butanal
+C00004,C01888,NADH,Aminoacetone
+C00004,C01929,NADH,L-Histidinal
+C00004,C02222,NADH,2-Maleylacetate
+C00004,C03508,NADH,L-2-Amino-3-oxobutanoic acid
+C00004,C03765,NADH,4-Hydroxyphenylacetaldehyde
+C00004,C03912,NADH,(S)-1-pyrroline-5-carboxylate
+C00004,C04171,NADH,"(2S,3S)-2,3-Dihydro-2,3-dihydroxybenzoate"
+C00004,C05999,NADH,Lactaldehyde
+C00004,C06010,NADH,(S)-2-Acetolactate
+C00004,C11457,NADH,3-(3-Hydroxyphenyl)propanoic acid
+C00004,C12623,NADH,"Trans-2,3-Dihydroxycinnamate"
+C00004,C14180,NADH,S-(Hydroxymethyl)glutathione
+C00004,C15930,NADH,D-Galactonate
+C00004,C16586,NADH,"2-Phenyl-1,3-propanediol monocarbamate"
+C00004,C16596,NADH,"5-Phenyl-1,3-oxazinane-2,4-dione"
+C00008,C00037,ADP,Glycine
+C00008,C00041,ADP,L-Alanine
+C00008,C00047,ADP,L-Lysine
+C00008,C00051,ADP,Glutathione
+C00008,C00062,ADP,L-Arginine
+C00008,C00064,ADP,L-Glutamine
+C00008,C00099,ADP,beta-Alanine
+C00008,C00104,ADP,IDP
+C00008,C00118,ADP,D-Glyceraldehyde 3-phosphate
+C00008,C00133,ADP,D-Alanine
+C00008,C00152,ADP,L-Asparagine
+C00008,C00158,ADP,Citric acid
+C00008,C00183,ADP,L-Valine
+C00008,C00214,ADP,Thymidine
+C00008,C00216,ADP,D-Arabinose
+C00008,C00255,ADP,Riboflavin
+C00008,C00257,ADP,Gluconic acid
+C00008,C00299,ADP,Uridine
+C00008,C00361,ADP,dGDP
+C00008,C00407,ADP,L-Isoleucine
+C00008,C00475,ADP,Cytidine
+C00008,C00483,ADP,Tyramine
+C00008,C00508,ADP,L-Ribulose
+C00008,C00522,ADP,(R)-Pantoate
+C00008,C00881,ADP,Deoxycytidine
+C00008,C00989,ADP,4-Hydroxybutanoic acid
+C00008,C00993,ADP,D-Alanyl-D-alanine
+C00008,C01168,ADP,Pseudouridine 5'-phosphate
+C00008,C01346,ADP,dUDP
+C00008,C01801,ADP,Deoxyribose
+C00008,C02067,ADP,Pseudouridine
+C00008,C02876,ADP,Propanoyl phosphate
+C00008,C03090,ADP,5-Phosphoribosylamine
+C00008,C04534,ADP,"6-Phospho-beta-D-glucosyl-(1,4)-D-glucose"
+C00008,C19769,ADP,"1,6-Anhydro-N-acetyl-beta-muramate"
+C00037,C00041,Glycine,L-Alanine
+C00037,C00051,Glycine,Glutathione
+C00037,C00065,Glycine,L-Serine
+C00037,C00086,Glycine,Urea
+C00037,C00213,Glycine,Sarcosine
+C00037,C00556,Glycine,Benzyl alcohol
+C00037,C03508,Glycine,L-2-Amino-3-oxobutanoic acid
+C00041,C00062,L-Alanine,L-Arginine
+C00041,C00065,L-Alanine,L-Serine
+C00041,C00099,L-Alanine,beta-Alanine
+C00041,C00133,L-Alanine,D-Alanine
+C00041,C00183,L-Alanine,L-Valine
+C00041,C00331,L-Alanine,Indolepyruvate
+C00041,C00349,L-Alanine,2-Methyl-3-oxopropanoate
+C00051,C00491,Glutathione,L-Cystine
+C00051,C14180,Glutathione,S-(Hydroxymethyl)glutathione
+C00051,C14786,Glutathione,"(1R,2S)-Naphthalene 1,2-oxide"
+C00051,C14802,Glutathione,"1-Nitronaphthalene-7,8-oxide"
+C00051,C14803,Glutathione,"1-Nitro-7-hydroxy-8-glutathionyl-7,8-dihydronaphthalene"
+C00051,C14804,Glutathione,"1-Nitro-7-glutathionyl-8-hydroxy-7,8-dihydronaphthalene"
+C00062,C00086,L-Arginine,Urea
+C00062,C00099,L-Arginine,beta-Alanine
+C00062,C00118,L-Arginine,D-Glyceraldehyde 3-phosphate
+C00062,C00179,L-Arginine,Agmatine
+C00062,C03912,L-Arginine,(S)-1-pyrroline-5-carboxylate
+C00064,C00152,L-Glutamine,L-Asparagine
+C00064,C00251,L-Glutamine,Chorismate
+C00064,C00819,L-Glutamine,D-Glutamine
+C00064,C03090,L-Glutamine,5-Phosphoribosylamine
+C00065,C00078,L-Serine,L-Tryptophan
+C00065,C00118,L-Serine,D-Glyceraldehyde 3-phosphate
+C00065,C00463,L-Serine,Indole
+C00065,C00542,L-Serine,Cystathionine
+C00065,C02291,L-Serine,L-Cystathionine
+C00078,C00148,L-Tryptophan,L-Proline
+C00078,C00331,L-Tryptophan,Indolepyruvate
+C00078,C00463,L-Tryptophan,Indole
+C00082,C00355,L-Tyrosine,"3,4-Dihydroxy-L-phenylalanine"
+C00082,C00483,L-Tyrosine,Tyramine
+C00086,C00179,Urea,Agmatine
+C00086,C00213,Urea,Sarcosine
+C00099,C00522,beta-Alanine,(R)-Pantoate
+C00104,C00299,IDP,Uridine
+C00104,C00475,IDP,Cytidine
+C00106,C00380,Uracil,Cytosine
+C00106,C00526,Uracil,Deoxyuridine
+C00118,C00463,D-Glyceraldehyde 3-phosphate,Indole
+C00123,C00556,L-Leucine,Benzyl alcohol
+C00133,C00993,D-Alanine,D-Alanyl-D-alanine
+C00135,C01929,L-Histidine,L-Histidinal
+C00147,C00170,Adenine,5'-Methylthioadenosine
+C00147,C00262,Adenine,Hypoxanthine
+C00148,C01157,L-Proline,Hydroxyproline
+C00148,C03912,L-Proline,(S)-1-pyrroline-5-carboxylate
+C00152,C02512,L-Asparagine,3-Cyano-L-alanine
+C00170,C11837,5'-Methylthioadenosine,Homoserine lactone
+C00178,C00214,Thymine,Thymidine
+C00181,C00310,D-Xylose,D-Xylulose
+C00183,C00407,L-Valine,L-Isoleucine
+C00216,C00309,D-Arabinose,D-Ribulose
+C00242,C00385,Guanine,Xanthine
+C00251,C00254,Chorismate,Prephenate
+C00251,C00885,Chorismate,Isochorismate
+C00255,C01007,Riboflavin,Reduced riboflavin
+C00255,C03114,Riboflavin,Dimethylbenzimidazole
+C00259,C00508,L-Arabinose,L-Ribulose
+C00262,C00385,Hypoxanthine,Xanthine
+C00299,C00361,Uridine,dGDP
+C00299,C00475,Uridine,Cytidine
+C00299,C00526,Uridine,Deoxyuridine
+C00299,C01346,Uridine,dUDP
+C00310,C00476,D-Xylulose,D-Lyxose
+C00365,C00526,dUMP,Deoxyuridine
+C00365,C01346,dUMP,dUDP
+C00380,C00475,Cytosine,Cytidine
+C00424,C02917,(S)-Lactaldehyde,"(S)-Propane-1,2-diol"
+C00475,C01346,Cytidine,dUDP
+C00475,C05822,Cytidine,3'-CMP
+C00483,C03758,Tyramine,Dopamine
+C00483,C03765,Tyramine,4-Hydroxyphenylacetaldehyde
+C00522,C00966,(R)-Pantoate,2-Dehydropantoate
+C00526,C00881,Deoxyuridine,Deoxycytidine
+C00831,C01134,Pantetheine,Pantetheine 4'-phosphate
+C00885,C04171,Isochorismate,"(2S,3S)-2,3-Dihydro-2,3-dihydroxybenzoate"
+C00885,C16519,Isochorismate,2-Succinyl-5-enolpyruvyl-6-hydroxy-3-cyclohexene-1-carboxylate
+C00900,C04181,2-Acetolactate,3-Hydroxy-3-methyl-2-oxobutanoic acid
+C01031,C14180,S-Formylglutathione,S-(Hydroxymethyl)glutathione
+C01157,C03912,Hydroxyproline,(S)-1-pyrroline-5-carboxylate
+C01168,C02067,Pseudouridine 5'-phosphate,Pseudouridine
+C01368,C02355,3'-UMP,"2',3'-Cyclic UMP"
+C01888,C03508,Aminoacetone,L-2-Amino-3-oxobutanoic acid
+C02291,C17234,L-Cystathionine,2-Aminobut-2-enoate
+C02512,C05711,3-Cyano-L-alanine,gamma-Glutamyl-beta-cyanoalanine
+C04181,C06010,3-Hydroxy-3-methyl-2-oxobutanoic acid,(S)-2-Acetolactate
+C06055,C06056,O-Phospho-4-hydroxy-L-threonine,4-Hydroxy-L-threonine
+C06055,C11638,O-Phospho-4-hydroxy-L-threonine,3-Amino-2-oxopropyl phosphate
+C06056,C06257,4-Hydroxy-L-threonine,1-Deoxy-D-xylulose
+C08353,C16639,beta-D-Ribopyranose,beta-D-ribofuranose
+C14800,C14805,"1-Nitronaphthalene-5,6-oxide","1-Nitro-5-hydroxy-6-glutathionyl-5,6-dihydronaphthalene"
+C14800,C14806,"1-Nitronaphthalene-5,6-oxide","1-Nitro-5-glutathionyl-6-hydroxy-5,6-dihydronaphthalene"
+C14802,C14803,"1-Nitronaphthalene-7,8-oxide","1-Nitro-7-hydroxy-8-glutathionyl-7,8-dihydronaphthalene"
+C14802,C14804,"1-Nitronaphthalene-7,8-oxide","1-Nitro-7-glutathionyl-8-hydroxy-7,8-dihydronaphthalene"
+C15587,C20463,Purine,Purine deoxyribonucleoside
+C17234,C20905,2-Aminobut-2-enoate,2-Iminobutanoate

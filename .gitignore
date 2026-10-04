@@ -1,0 +1,19 @@
+# Raw metabolomics data
+raw_data_POS/
+raw_data_POS.zip
+
+# Large/intermediate analysis files
+*.rds
+feature_intensity_matrix.csv
+feature_metadata.csv
+
+# External dependency/database
+ipaPy2/
+
+# Large database/archive files
+ecmdb.json.zip
+ipapy2_baseline_annotations.pkl
+
+# Python cache
+__pycache__/
+*.pyc
